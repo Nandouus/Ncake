@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>NcaKe - o teu lugar dos bolos!</title>
+
+    <style>
+        .slide {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+</head>
+<body>
+    
+<!--HEADER-->
+<header class="relative w-full h-[420px] bg-zinc-900">
+    <div class="absolute w-full h-full">
+        <div class="slide w-full h-full absolute" style="background-image: url('./assets/slide1.png');"></div>
+        <div class="slie w-full h-full absolute hidden" style="background-image: url('./assets/slide2.png');"></div>
+        <div class="slide w-full h-full absolute hidden" style="background-image: url('./assets/slide3.png');"></div>
+    </div>
+
+    <div class="w-full h-full flex flex-col justify-between items-start px-5 py-10 relative z-10">
+        <img
+            src="./assets/NcaKe.png"
+            alt="Logo NcaKe"
+            class="absolute top-5 left-5 w-32 h-32 rounded-full shadow-lg hover:scale-110 transition-transform duration-200"
+        />
+        
+        <div class="absolute bottom-0 left-0 p-5">
+            <div class="mt-14">
+                <span class="text-black font-extralight">Rua 25 de Abril 198, Braga</span>
+            </div>
+    
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-1" id="date-spam">
+                <span class="text-black">Seg a Sab - 13:00 as 20:00</span>
+            </div>
+        </div>
+    </div>
+</header>
+<!--FIM DO HEADER-->
+
+<h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">    
+   Bolos
+</h2>
+
+
+<!--INICIO MENU-->  
+<div id="menu">
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16">
+        <!-- Início do Produto: Bolo de Cenoura -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-de-cenoura.jpg" alt="Bolo de Cenoura" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo de Cenoura</p>
+                <p class="text-sm">Clássico bolo brasileiro com massa fofinha e cobertura de chocolate.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">8.50€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo de Cenoura" data-price="8.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+        <!-- Início do Produto: Bolo Cheesecake -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-cheesecake.jpg" alt="Bolo Cheesecake" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo Cheesecake</p>
+                <p class="text-sm">Sobremesa cremosa com base de bolacha e cobertura de morango.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">35.50€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo Cheesecake" data-price="35.50">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+        <!-- Início do Produto: Bolo Red Velvet -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-red-velvet.jpg" alt="Bolo Red Velvet" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo Red Velvet</p>
+                <p class="text-sm">Massa vermelha aveludada com cobertura de cream cheese.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">47.30€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo Red Velvet" data-price="47.30">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+        <!-- Início do Produto: Bolo de Bolacha -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-de-bolacha.jpg" alt="Bolo de Bolacha" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo de Bolacha</p>
+                <p class="text-sm">Camadas de bolacha Maria alternadas com creme delicioso.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">25.70€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo de Bolacha" data-price="25.70">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+        <!-- Início do Produto: Bolo de Brigadeiro -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-de-brigadeiro.jpg" alt="Bolo de Brigadeiro" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo de Brigadeiro</p>
+                <p class="text-sm">Bolo de chocolate com cobertura de brigadeiro cremoso e granulado.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">23.90€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo de Brigadeiro" data-price="23.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+        <!-- Início do Produto: Bolo Marie Antoinette -->
+        <div class="flex gap-2">
+            <img src="./assets/bolo-marie-antoinette.jpg" alt="Bolo Marie Antoinette" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            <div>
+                <p class="font-bold">Bolo Marie Antoinette</p>
+                <p class="text-sm">Camadas de bolo de baunilha e creme, uma escolha sofisticada e saborosa.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">57.00€</p>
+                    <button class="bg-green-600 px-5 rounded add-to-cart-btn" data-name="Bolo Marie Antoinette" data-price="57.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Produto -->
+
+<!-- Início do Produto: Bolo Personalizado -->
+<div class="flex gap-2">
+    <img src="./assets/personalizado.jpg" alt="Bolo Personalizado" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    <div>
+        <p class="font-bold">Personalize seu Bolo</p>
+        <p class="text-sm">Escolha os sabores, recheios e decoração para criar o bolo perfeito para sua ocasião especial.</p>
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">Preço sob consulta</p>
+            <button class="bg-green-600 px-5 rounded open-custom-modal" data-name="Personalizado">
+                <i class="fa fa-edit text-lg text-white"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Fim do Produto -->
+</main>
+
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Bolachas</h2>
+
+    <!-- GRID DE BOLACHAS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16" id="menu">
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/bolacha-cookie.jpg"
+                alt="Bolacha Cookie"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Bolacha Cookie</p>
+                <p class="text-sm">Deliciosa bolacha cookie com pedaços de chocolate, perfeita para acompanhar bebidas quentes ou como lanche.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">2.00€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Bolacha Cookie"
+                        data-price="2.00"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/bolacha-húngara.jpg"
+                alt="Bolacha Húngara"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Bolacha Húngara</p>
+                <p class="text-sm">Bolacha crocante com cobertura de chocolate, uma opção tradicional e saborosa.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1.50€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Bolacha Húngara"
+                        data-price="1.50"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/bolacha-de-maizena.jpg"
+                alt="Bolacha de Maizena"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Bolacha de Maizena</p>
+                <p class="text-sm">Leve e crocante, feita com farinha de milho, ideal para acompanhar suas bebidas favoritas.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Bolacha de Maizena"
+                        data-price="1"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/bolacha-de-morango.jpg"
+                alt="Bolacha de Morango"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Bolacha de Morango</p>
+                <p class="text-sm">Bolacha com essência de morango, ideal para um lanche doce ou para acompanhar leite e chá.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1.50€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Bolacha de Morango"
+                        data-price="1.50"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+    </div>
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Doces</h2>
+
+    <!-- GRID DE DOCES -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16" id="menu">
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/brigadeiro.jpg"
+                alt="Brigadeiro"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Brigadeiro</p>
+                <p class="text-sm">O brigadeiro é um doce brasileiro cremoso feito de leite condensado, chocolate em pó e manteiga, enrolado em bolinhas e coberto com granulado. É um favorito em festas e ocasiões especiais.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1.70€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Brigadeiro"
+                        data-price="1.70"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/brigadeiro-de-morango.jpg"
+                alt="Brigadeiro de Morango"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Brigadeiro de Morango</p>
+                <p class="text-sm">O brigadeiro de morango é uma versão do tradicional doce brasileiro, feito com leite condensado e sabor de morango, enrolado em açúcar ou granulado. É cremoso e frutado.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1.70€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Brigadeiro de Morango"
+                        data-price="1.70"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+        <!-- PRODUTO -->
+        <div class="flex gap-2">   
+            <img
+                src="./assets/beijinho.jpg"
+                alt="Beijinho"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+    
+            <div>
+                <p class="font-bold">Beijinho</p>
+                <p class="text-sm">O Beijinho é uma versão do tradicional doce brasileiro, feito com leite condensado e leite em pó, enrolado em açúcar ou leite em pó. É cremoso e frutado.</p>
+    
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">1.70€</p>
+                    <button 
+                        class="bg-green-600 px-5 rounded add-to-cart-btn"
+                        data-name="Beijinho"
+                        data-price="1.70"
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PRODUTO -->
+    
+    </div>
+    <!-- FIM DO MENU -->
+
+
+
+
+<!-- Rodapé -->
+<footer class="bg-gray-800 text-white py-10 mt-10" style="background: linear-gradient(to right, #1F2937, #111827);">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <!-- Seção Sobre Nós e Logo -->
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h3 class="text-xl font-bold mb-4 text-white">Sobre Nós</h3>
+                <p class="text-sm text-gray-300 mb-4">Somos uma confeitaria dedicada a oferecer os melhores bolos e doces da cidade. Nossa missão é adoçar o seu dia com produtos de alta qualidade e um atendimento excelente.</p>
+                <img src="./assets/NcaKe.png" alt="Logo NcaKe" class="w-16 h-16 rounded-full">
+            </div>
+            
+            <!-- Seção de Contato e Redes Sociais -->
+            <div class="md:w-1/2 flex flex-col items-end">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-4 text-white">Contato</h3>
+                    <p class="mb-2 text-gray-300"><i class="fas fa-phone mr-2 text-white"></i> +351 932 469 242</p>
+                    <p class="mb-2 text-gray-300"><i class="fas fa-envelope mr-2 text-white"></i> ncake2024@gmail.com </p>
+                    <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2 text-white"></i> Rua 25 de Abril 198, Braga</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Siga-nos</h3>
+                    <div class="flex space-x-6">
+                        <a href="https://wa.me/351932469242" target="_blank" class="text-white hover:text-green-400 transition-colors duration-300">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ncake_braga/" target="_blank" class="text-white hover:text-pink-400 transition-colors duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/ncake.braga/" target="_blank" class="text-white hover:text-blue-400 transition-colors duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2023 NcaKe. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+<!-- Modal para Bolo Personalizado -->
+<div id="custom-cake-modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-md mx-4">
+        <h2 class="text-2xl font-bold mb-4">Personalize seu Bolo</h2>
+        <textarea id="custom-cake-description" rows="4" class="w-full p-2 border rounded mb-4" placeholder="Descreva como você quer o seu bolo personalizado..."></textarea>
+        <div class="flex justify-between">
+            <button id="close-custom-modal" class="bg-red-500 text-white px-4 py-2 rounded">Fechar</button>
+            <button id="add-custom-cake" class="bg-green-500 text-white px-4 py-2 rounded">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</div>
+    
+
+<!-- MODAL CART -->
+<div class="fixed top-0 left-0 z-[99] w-full h-full bg-black/60 flex items-center justify-center hidden" id="cart-modal">
+
+    <div class="bg-white rounded-md p-5 min-w-[90%] md:min-w-[600px]">
+        <h2 class="font-bold text-2xl text-center mb-4">O meu carrinho</h2>
+
+        <div id="cart-items" class="flex flex-col justify-between mb-2"> </div>
+
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        
+        <p class="font-bold mt-4">Morada de entrega:</p>
+        <input type="text" id="address" placeholder="Escreva a sua morada" class="w-full p-1 my-1 border-2 rounded" />
+        <p id="address-warn" class="hidden text-red-500">Escreva a sua morada!</p>
+
+        <div class="flex w-full items-center justify-between mt-5">
+            <button id="close-modal-btn" class="text-red-500 font-bold">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-2 rounded">Finalizar pedido</button>
+        </div>
+    </div>
+
+</div>
+<!-- FIM MODAL CART -->
+
+
+
+<!-- BUTTON CART FLOATING -->
+<div class="fixed bottom-4 right-4 z-40">
+    <button id="cart-btn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2">
+        <i class="fa fa-cart-plus text-lg"></i>
+        (<span id="cart-count">0</span>)
+    </button>
+</div>
+<!-- FIM BUTTON CART FLOATING -->
+
+    <!-- MODAL PRODUTO -->
+    <div id="product-modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto">
+            <!-- O conteúdo do modal será inserido dinamicamente pelo JavaScript -->
+        </div>
+    </div>
+    <!-- FIM MODAL PRODUTO -->
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
